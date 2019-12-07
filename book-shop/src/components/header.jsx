@@ -1,15 +1,17 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
         <header>
             <nav className="navbar-menu">
-                <navLink href="/">Book Store</navLink>
-                <navLink href="/" className="active" aria-current="page">Home</navLink>
-                <navLink href="/store">Store</navLink>
-                <navLink href="/orders">My Orders</navLink>
-                <navLink href="/cart">Cart</navLink>
-                <navLink href="javascript:void(0)">Logout</navLink></nav>
+                <NavLink to="/" activeclassName="active" aria-current="page">Home</NavLink>
+                <NavLink to="/" activeclassName="active">Book Store</NavLink>
+                <NavLink to="/store" activeclassName="active">Store</NavLink>
+                <NavLink to="/orders" activeclassName="active">My Orders</NavLink>
+                <NavLink to="/cart" activeclassName="active">Cart</NavLink>
+                <NavLink to="/logout">Logout</NavLink>
+                </nav>
         </header>
     );
 };
