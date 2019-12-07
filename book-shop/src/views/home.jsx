@@ -1,56 +1,44 @@
-import React, { Component } from 'react'
-import BookCardList from '../common/Book/BookCardList'
-import Auth from '../../utils/auth'
-import {Link} from 'react-router-dom'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
 
 class HomePage extends Component {
   render () {
-    // const isAdmin = Auth.isUserAdmin()
-    // const isAuthenticated = Auth.isUserAuthenticated()
-
-    // let headingText, secondLinkName, secondLinkPath
-    // if (isAdmin) {
-    //   headingText = ', ' + Auth.getUsername()
-    //   secondLinkName = 'View pending orders'
-    //   secondLinkPath = '/admin/orders'
-    // } else if (isAuthenticated) {
-    //   headingText = ', ' + Auth.getUsername()
-    //   secondLinkName = 'View your orders'
-    //   secondLinkPath = '/orders'
-    // } else {
-    //   headingText = ''
-    //   secondLinkName = 'Register'
-    //   secondLinkPath = '/register'
-    // }
-
-    // const startIndex = 0
-    // const pageSize = 6
-    // const bookCards = this.props.products
-    //   .sort((a, b) => b.likes.length - a.likes.length)
-    //   .slice(startIndex, pageSize)
 
     return (
-      <div className='welcome-wrapper'>
-          <div className='welcome'>
-            {/* <h1>Welcome to our book store{headingText} !</h1> */}
-            {/* {!isAuthenticated && <p>Your favourite book is now just a few clicks away. Register now and choose from our store.</p>} */}
-            <p>
-              <Link to='/store'>Go To Store</Link>
-              {/* <Link to={secondLinkPath}>{secondLinkName}</Link> */}
-            </p>
+      <main>
+        <div classNameName="welcome-wrapper">
+          <div className="welcome">
+            <h1>Welcome to our book store, tanya !</h1>
+            <p><a href="/store">Go To Store</a><a href="/orders">View your orders</a></p>
           </div>
-        <h2>Top Rated</h2>
-        {/* <BookCardList products={bookCards} /> */}
-      </div>
+          <h2>Top Rated</h2>
+          <div className="row">
+            <div className="card-deck space-top">
+              <div className="card col-4"><img className="card-img-top card-image" src="https://images-na.ssl-images-amazon.com/images/I/419M8dJUa-L._SY346_.jpg"
+                  alt="What the Wind Knows " />
+                <div className="card-body">
+                  <h5 className="card-title">What the Wind Knows </h5>
+                  <p className="card-text">Anne Gallagher grew up enchanted by her grandfather’s stories of Ireland.
+                    Heartbroken at his death, she travels to his childhood home to spread his ashes.</p>
+                </div>
+                <div className="card-footer"><small className="text-muted"></small><a type="button" className="btn btn-primary float-right btn-sm"
+                    href="/details/5c75009b6fa7f81b2459134e">Details</a><button type="button" className="btn btn-warning float-right btn-sm">Order</button></div>
+              </div>
+              <div className="card col-4"><img className="card-img-top card-image" src="https://images-na.ssl-images-amazon.com/images/I/51fonMmNpnL.jpg"
+                  alt="Harry Potter" />
+                <div className="card-body">
+                  <h5 className="card-title">Harry Potter</h5>
+                  <p className="card-text">Harry Potter and the Philosopher's Stone is a fantasy novel written by British
+                    author J. K. Rowling.</p>
+                </div>
+                <div className="card-footer"><small className="text-muted"></small><a type="button" className="btn btn-primary float-right btn-sm"
+                    href="/details/5c750355eba4543e800f7ce4">Details</a><button type="button" className="btn btn-warning float-right btn-sm">Order</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     )
   }
 }
 
-function mapStateToProps (state) {
-  return {
-    products: state.products
-  }
-}
-
-export default connect(mapStateToProps)(HomePage)
+export default HomePage;

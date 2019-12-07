@@ -1,13 +1,12 @@
-import React from 'react'
-import { Footer } from 'mdbreact'
-import { Link } from 'react-router-dom'
+import React from 'react';
 
-const FooterComponent = () => (
+
+const Footer = () => (
   <div>
-    <Footer id='footer'>
+    <footer id='footer'>
         &copy; Book Library {(new Date().getFullYear())}
-    </Footer>
+    </footer>
   </div>
 )
 
-export default FooterComponent
+export default Footer;
