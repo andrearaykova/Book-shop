@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import BookCard from './book-card';
 import Loading from './loading';
+import BookService from '../services/book-service';
 
 class TopRatedBookCards extends Component {
     state = {
@@ -8,8 +9,10 @@ class TopRatedBookCards extends Component {
         isLoading: false,
     };
 
+    static service = new BookService();
+
     render() {
-        const { books } = this.state;
+        const { books, isLoading } = this.state;
 
         if (!isLoading) {
             return <Loading />;
@@ -21,7 +24,7 @@ class TopRatedBookCards extends Component {
                     <br />
                     <h2>No books</h2>
                 </div>
-            )
+            );
         }
 
         return (
@@ -39,8 +42,14 @@ class TopRatedBookCards extends Component {
             </Fragment>
         );
     }
-    componentDidMount() {
+    async componentDidMount() {
+        try {
+            const books = await TopRatedBookCards.service.getTopRatedBooks();
 
+            this.setState({ books });
+        } catch (error) {
+            console.error(error);
+        }
     }
 }
 
