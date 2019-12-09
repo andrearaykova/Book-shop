@@ -48,6 +48,9 @@ class Login extends React.Component {
 
                 updateUser({
                     isLoggedIn: true,
+                    // updateUser: () => {
+                    //     updateUser()
+                    // },
                     ...result.user
                 });
 
@@ -71,7 +74,7 @@ class Login extends React.Component {
             );
         }
         return (
-            <div class="form-wrapper" >
+            <div className="form-wrapper" >
                 {
                     error.length
                         ? <div>Something went wrong: {error}</div>
@@ -79,11 +82,11 @@ class Login extends React.Component {
                 }
                 <h1>Login</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label htmlFor="email">E-mail</label>
                         <input type="text" name="email" id="email" placeholder="Enter e-mail" value={email} onChange={this.handleChange} />
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" id="password" placeholder="Enter password" value={password} onChange={this.handleChange} />
                     </div>
@@ -94,7 +97,7 @@ class Login extends React.Component {
     }
 }
 
-const LoginWithContext = () => {
+const LoginWithContext = (props) => {
     return (
         <UserConsumer>
             {

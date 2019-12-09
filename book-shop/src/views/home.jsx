@@ -7,8 +7,8 @@ class Home extends Component {
   render() {
     return (
       <main>
-        <div classNameName="welcome-wrapper">
-          <LandingMessage message="Welcome to our book store, ">
+        <div className="welcome-wrapper">
+          <LandingMessage message="Welcome to our book store">
             <p>
               <Link to="/store">Go To Store</Link>
               <Link to="/orders">View your orders</Link>

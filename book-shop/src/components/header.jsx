@@ -1,16 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { userConsumer, UserConsumer } from '../components/contexs/user-contex';
+import { UserConsumer } from '../components/contexs/user-contex';
 
 const Header = ({ isLoggedIn, username }) => {
     return (
         <header>
             <nav className="navbar-menu">
-                <NavLink to="/" activeclassName="active" aria-current="page">Home</NavLink>
-                <NavLink to="/" activeclassName="active">Book Store</NavLink>
-                <NavLink to="/store" activeclassName="active">Store</NavLink>
-                <NavLink to="/orders" activeclassName="active">My Orders</NavLink>
-                <NavLink to="/cart" activeclassName="active">Cart</NavLink>
+                <NavLink to="/" activeclassname="active" aria-current="page">Home</NavLink>
+                <NavLink to="/" activeclassname="active">Book Store</NavLink>
+                <NavLink to="/store" activeclassname="active">Store</NavLink>
+                <NavLink to="/orders" activeclassname="active">My Orders</NavLink>
+                <NavLink to="/cart" activeclassname="active">Cart</NavLink>
                 {
                     isLoggedIn
                         ? <NavLink to="/logout">Logout</NavLink>
