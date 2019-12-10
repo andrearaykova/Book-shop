@@ -42,7 +42,7 @@ class App extends Component {
                             <Switch>
                                 <Route path="/" exact component={Home} />
                                 <Route path="/login" component={Login} />
-                                <AuthorizedRoute path="/createbook" component={CreateBook} allowedRoles={['admin']} />
+                                <Route path="/createbook" component={CreateBook} allowedRoles={['admin']} />
                                 <AuthorizedRoute path="/logout" component={Logout} />
                                 <Route component={NotFound} />
                             </Switch>

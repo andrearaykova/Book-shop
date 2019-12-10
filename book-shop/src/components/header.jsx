@@ -7,7 +7,7 @@ const Header = ({ isLoggedIn, username }) => {
         <header>
             <nav className="navbar-menu">
                 <NavLink to="/" activeclassname="active" aria-current="page">Home</NavLink>
-                <NavLink to="/" activeclassname="active">Book Store</NavLink>
+                {/* <NavLink to="/" activeclassname="active">Book Store</NavLink> */}
                 <NavLink to="/store" activeclassname="active">Store</NavLink>
                 <NavLink to="/orders" activeclassname="active">My Orders</NavLink>
                 <NavLink to="/cart" activeclassname="active">Cart</NavLink>
