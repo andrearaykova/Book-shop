@@ -31,9 +31,9 @@ class EditPage extends Component {
       this.setState({
         title: product.title,
         description: product.description,
+        image: product.image,
         author: product.author,
         price: product.price.toFixed(2),
-        image: product.image
       })
     } else {
       this.props.fetchProducts()
@@ -54,9 +54,9 @@ class EditPage extends Component {
         this.setState({
           title: product.title,
           description: product.description,
+          image: product.image,
           author: product.author,
           price: product.price.toFixed(2),
-          image: product.image
         })
       }
     }

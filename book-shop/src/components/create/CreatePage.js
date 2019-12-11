@@ -14,9 +14,9 @@ class CreatePage extends Component {
     this.state = {
       title: '',
       description: '',
+      image: '',
       author: '',
       price: '',
-      image: ''
     }
 
     this.onChange = this.onChange.bind(this)

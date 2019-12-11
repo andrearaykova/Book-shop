@@ -76,7 +76,7 @@ class App extends Component {
             <Route path='/register' component={RegisterPage} />
             <Route path='/login' component={LoginPage} />
             <Route path='/create' component={CreatePage} />
-            <AdminRoute path='/admin/create' component={CreatePage} />
+            {/* <AdminRoute path='/admin/create' component={CreatePage} /> */}
             <AdminRoute path='/admin/edit/:id' component={EditPage} />
             <AdminRoute path='/admin/orders' component={OrdersPage} />
             <PrivateRoute path='/details/:id' component={DetailsPage} />
