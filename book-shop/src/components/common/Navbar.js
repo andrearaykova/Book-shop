@@ -7,7 +7,6 @@ const Navbar = (props) => {
   return (
     <header>
       <nav className='navbar-menu'>
-        {/* <Link  to='/'>Book Store</Link> */}
         <NavLink exact to='/'>Home</NavLink>
         <NavLink exact to='/create'>Create Book</NavLink>
         <NavLink  to='/store'>Store</NavLink>
